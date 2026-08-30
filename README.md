@@ -46,25 +46,25 @@ changed the on-disk data layout and broke the volume mount.
 
 The following environment variables are read from `.env` (with defaults):
 
-| Variable          | Default        | Used for                          |
-| ----------------- | -------------- | --------------------------------- |
-| `POSTGRES_USER`   | `postgres`     | Superuser name created on init    |
-| `POSTGRES_PASSWORD` | `postgres`   | Superuser password (set on init)  |
-| `POSTGRES_DB`     | `postgres_db`  | Default database created on init  |
-| `POSTGRES_PORT`   | `5432`         | Host port the container maps to   |
+| Variable             | Default        | Used for                          |
+| -------------------- | -------------- | --------------------------------- |
+| `POSTGRES_USER`      | `postgres`     | Superuser name created on init    |
+| `POSTGRES_PASSWORD`  | `postgres`     | Superuser password (set on init)  |
+| `POSTGRES_DB`        | `postgres_db`  | Default database created on init  |
+| `POSTGRES_PORT`      | `5432`         | Host port the container maps to   |
 
 ## 🛠️ Useful Commands
 
-| Action             | Command                              | Shortcut (just)   |
-| ------------------ | ------------------------------------ | ----------------- |
-| Start              | `docker compose up -d`               | `just up`         |
-| Stop               | `docker compose down`                | `just down`       |
-| Restart            | `docker compose restart postgres`    | `just restart`    |
-| Logs               | `docker compose logs -f postgres`    | `just logs`       |
-| Database shell     | `docker exec -it local-postgres psql -U postgres` | `just psql` |
-| Status             | `docker compose ps`                  | `just status`     |
-| Stop & remove      | `docker compose down`                | `just clean`      |
-| Reset (wipe data)  | `docker compose down --volumes`      | `just reset`      |
+| Action            | Command                                           | Shortcut (just) |
+| ----------------- | ------------------------------------------------- | --------------- |
+| Start             | `docker compose up -d`                            | `just up`       |
+| Stop              | `docker compose down`                             | `just down`     |
+| Restart           | `docker compose restart postgres`                 | `just restart`  |
+| Logs              | `docker compose logs -f postgres`                 | `just logs`     |
+| Database shell    | `docker exec -it local-postgres psql -U postgres` | `just psql`     |
+| Status            | `docker compose ps`                               | `just status`   |
+| Stop & remove     | `docker compose down`                             | `just clean`    |
+| Reset (wipe data) | `docker compose down --volumes`                   | `just reset`    |
 
 ## 🔌 Connecting from an Application
 
@@ -78,7 +78,7 @@ The following environment variables are read from `.env` (with defaults):
 
 Example connection string:
 
-```
+```text
 postgresql://postgres:postgres@localhost:5432/postgres_db
 ```
 
